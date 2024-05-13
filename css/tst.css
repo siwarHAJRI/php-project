@@ -1,6 +1,6 @@
 body {
-    margin: 0;
-    padding: 0;
+    margin: 0; /* Supprime toutes les marges par défaut */
+    padding: 0; /* Supprime tous les rembourrages par défaut */
     font-family: Arial, sans-serif;
     background-color: #0B1118; /* Changer la couleur de l'arrière-plan */
 }
@@ -16,20 +16,17 @@ body {
 .movie-card {
     position: relative;
     width: 200px; /* Largeur fixe de la carte */
-    background-color: #101116; /* Changer la couleur de fond de la carte */
-    border-radius: 10px; /* Ajouter une bordure arrondie */
+    background-color: transparent; /* Fond de la carte transparent */
+    border: none; /* Supprimer la bordure */
     overflow: hidden; /* Cacher tout contenu qui dépasse de la carte */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ajouter une ombre légère */
     transition: transform 0.3s ease; /* Ajouter une transition pour les animations */
 }
 
-.movie-card:hover {
-    transform: translateY(-5px); /* Animer la carte sur hover */
-}
-
-.movie-card img {
+.movie-image {
     width: 100%;
-    height: 100%; /* Ajuster automatiquement la hauteur de l'image */
+    height: auto; /* Ajuste automatiquement la hauteur pour maintenir les proportions */
+    object-fit: fill; /* Ajuster automatiquement la taille de l'image */
 }
 
 .movie-card-content {
